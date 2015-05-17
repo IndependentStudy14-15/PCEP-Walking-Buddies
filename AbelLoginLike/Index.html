@@ -7,15 +7,15 @@
 <body>
 
 
-// TODO:
-// me/users facebook to see oither friends who use the app
+<!-- TODO:
+// me/users facebook to see other friends who use the app
 // allow input of scedhule and associate with account
 //
 //
 //
 //
 //
-//
+-->
 
 <h1>Welcome to PCEP Walking Buddies</h1>
 <h3>Login with Facebook to see which of your friends you can walk with</h3>
@@ -95,11 +95,28 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
+	  
+	  
+	  
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Thanks for logging in, ' + response.first_name + '!';
     });
   }
+  
+  
+  function makeFile()
+  {
+  <?php
+	$file = fopen("/yo.txt", "w");
+		echo fwrite($file, "response");
+		fclose($file);
+  ?>
+  }
+  
 </script>
+
+<button onclick="makeFile()">MESSAGE 4</button>
+
 
 <!--
   Below we include the Login Button social plugin. This button uses
@@ -107,18 +124,34 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
 </fb:login-button>
+
+<!--
+
+		$file = fopen("database.txt", "a");
+		echo fwrite($file, "response.name");
+		fclose($file);
+	  
+-->
 
 <div id="status">
 </div>
 
+<!--
 <div
   class="fb-like"
   data-share="true"
   data-width="450"
   data-show-faces="true">
 </div>
+-->
+
+<p> Once you've logged in, click the button below. </P>
+
+<form id="frm2" action="http://pcepwalkingbuddies.com/scheduleinput.html">
+  <input type="submit" value="Proceed to schedule submission">
+</form>
 
 </body>
 </html>
