@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PCEP Walking Buddies</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jquery/jquery.slidertron-0.1.js"></script>
+<style type="text/css">
+@import "gallery.css";
+body {
+	background-image: url(background3.jpg);
+}
+h4 {
+	font-size: 12px;
+	color: #000000;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+	<div id="logo">
+		<h1><img src="Untitled.png" alt="" width="217" height="80" /></h1>
+	</div>
+	<!-- end div#logo -->
+	<div id="menu">
+		<ul>
+			<li class="active"><a href="index.html">Homepage</a></li>
+			<li></li>
+			<li>
+            
+            
+            <a href="Aboutreal.html">About</a></li>
+		  <li><a href="Contactreal.html">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end div#menu -->
+</div>
+<div>
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="content">
+				<div id="gallery-bg">
+					<div id="gallery-bgtop">
+						<div id="gallery-bgbtm">
+							<div id="foobar">
+								<div class="navigation"> <a href="#" class="first">[ &lt;&lt; ]</a> &nbsp; <a href="#" class="previous">[ &lt; ]</a> &nbsp; <a href="#" class="next">[ &gt; ]</a> &nbsp; <a href="#" class="last">[ &gt;&gt; ]</a> </div>
+								<div class="viewer">
+									<div class="reel">
+										<div class="slide"> <img src="images/run one.jpg" alt="" width="551" height="334"></div>
+										<div class="slide"> <img src="images/run two.jpg" alt="" width="551" height="334"></div>
+										<div class="slide"> <img src="images/run three.jpg" alt="" width="551" height="334"></div>
+                                        <div class="slide"> <img src="images/run four.jpg" alt="" width="551" height="334"></div>
+								  </div>
+							  </div>
+						  </div>
+						  <script type="text/javascript">
+
+						$('#foobar').slidertron({
+							viewerSelector:			'.viewer',
+							reelSelector:			'.viewer .reel',
+							slidesSelector:			'.viewer .reel .slide',
+							navPreviousSelector:	'.previous',
+							navNextSelector:		'.next',
+							navFirstSelector:		'.first',
+							navLastSelector:		'.last'
+						});
+						
+					</script>
+							<!-- end -->
+						</div>
+					</div>
+				</div>
+				<div class="post">
+					<div class="post-bgtop">
+						<div class="post-bgbtm">
+						  <p class="title" id="news"><font color="#000000">Everybody knows how lonely it can be on the first day of school trying to walk from school to school without knowing which of your friends you can walk with. Or what about in the middle of the semester when your friend is sick? We aim to make these struggles of the past with PCEP Walking Buddies! This Website is intended to let you find walking buddies by inputting your schedule and having others do the same.</font></p>
+			          </div>
+					</div>
+				</div>
+			</div>
+			<!-- end div#content -->
+			<div id="sidebar">
+				<div id="sidebar-bgtop">
+					<div id="sidebar-bgctr">
+						<ul>
+							<ul>
+							  <ul>
+							    <ul>
+							      <li>
+							        <div align="center">
+							          <h4><strong>
+						              Welcome to PCEP Walking Buddies</strong></h4>
+							          <p>&nbsp;</p>
+						            We are PCEP. Together we can all make friends. Join PCEP Walking Buddies and join the family. See who you are walking with when. Log into Facebook to continue.</div>
+								  
+								  <fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
+								  </fb:login-button>
+								  
+								  Once you've logged in, click the button below.
+								  
+								  <form id="frm2" action="http://pcepwalkingbuddies.com/scheduleinputfinal.php">
+									<input type="submit" value="Proceed to schedule submission">
+									</form>
+
+								<div id="status">
+								</div>
+								  
+								  </li>
+						        </ul>
+							    <p>&nbsp;</p>
+							    <ul>
+							      <li>
+							        <div align="center">
+							          <p>&nbsp;</p>
+							          <p>&nbsp;</p>
+							          <p>&nbsp;</p>
+							          <p>&nbsp;</p>
+							          <p>&nbsp;</p>
+							          <p>&nbsp;</p>
+							          <p>&nbsp;</p>
+							          <p>&nbsp;</p>
+						            </div>
+						          </li>
+						        </ul>
+						      </ul>
+					      </ul>
+							<li>							  </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<!-- end div#sidebar --></div>
+	</div>
+	<!-- end div#page -->
+</div>
+<!-- end div#wrapper --><!-- end div#footer -->
+
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '819679954781861',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.2' // use version 2.2
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+	  
+	  
+	  
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.first_name + '!';
+    });
+  }
+</script>
+
+</body>
+</html>

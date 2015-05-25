@@ -102,21 +102,7 @@
         'Thanks for logging in, ' + response.first_name + '!';
     });
   }
-  
-  
-  function makeFile()
-  {
-  <?php
-	$file = fopen("/yo.txt", "w");
-		echo fwrite($file, "response");
-		fclose($file);
-  ?>
-  }
-  
 </script>
-
-<button onclick="makeFile()">MESSAGE 4</button>
-
 
 <!--
   Below we include the Login Button social plugin. This button uses
@@ -126,14 +112,6 @@
 
 <fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
 </fb:login-button>
-
-<!--
-
-		$file = fopen("database.txt", "a");
-		echo fwrite($file, "response.name");
-		fclose($file);
-	  
--->
 
 <div id="status">
 </div>
@@ -149,7 +127,7 @@
 
 <p> Once you've logged in, click the button below. </P>
 
-<form id="frm2" action="http://pcepwalkingbuddies.com/scheduleinput.html">
+<form id="frm2" action="http://pcepwalkingbuddies.com/scheduleinputfinal.php">
   <input type="submit" value="Proceed to schedule submission">
 </form>
 
